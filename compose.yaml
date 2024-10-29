@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  database:
+    image: 'mysql:latest'
+    container_name: 'database'
+    environment:
+      MYSQL_DATABASE: 'core'
+      MYSQL_ROOT_PASSWORD: '${MYSQL_ROOT_PASSWORD}'
+    ports:
+      - '3306:3306'
+
+  database-manager:
+    image: 'adminer'
+    container_name: 'database-manager'
+    ports:
+      - '8081:8080'
