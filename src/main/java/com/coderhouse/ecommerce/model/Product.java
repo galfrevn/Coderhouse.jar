@@ -1,55 +1,30 @@
 package com.coderhouse.ecommerce.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import jakarta.persistence.Index;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "products", indexes = {
-    @Index(name = "idx_code", columnList = "code", unique = true)
-})
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Product {
-
     @Id
-    @JsonProperty(value = "id")
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String id;
 
-    @JsonProperty(value = "description")
-    @Column(name = "description", length = 150)
-    String description;
+    private String title;
+    private String description;
 
-    @JsonProperty(value = "code")
-    @Column(name = "code", length = 50, nullable = false, unique = true)
-    String code;
+    private double price;
+    private int stock;
 
-    @JsonProperty(value = "stock")
-    @Column(name = "stock", nullable = false)
-    int stock;
-
-    @JsonProperty(value = "price")
-    @Column(name = "price", nullable = false)
-    double price;
-
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
-
-    public String getDescription() { return description; }
-    public void setDescription(String description) { this.description = description; }
-
-    public String getCode() { return code; }
-    public void setCode(String code) { this.code = code; }
-
-    public int getStock() { return stock; }
-    public void setStock(int stock) { this.stock = stock; }
-
-    public double getPrice() { return price; }
-    public void setPrice(double price) { this.price = price; }
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonBackReference
+    private Category category;
 }
