@@ -1,0 +1,1421 @@
+{
+	"info": {
+		"_postman_id": "e62618f3-24c7-43c2-9c95-e0ec9e20d16d",
+		"name": "Coderhouse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39664709"
+	},
+	"item": [
+		{
+			"name": "V1",
+			"item": [
+				{
+					"name": "Customer",
+					"item": [
+						{
+							"name": "Create Customer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"John\",\r\n  \"lastName\": \"Doe\",\r\n  \"document\": \"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}/api/customers",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"customers"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "(Example) Create Customer",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"John\",\r\n  \"lastName\": \"Doe\",\r\n  \"document\": \"123456789\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}/api/customers",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"api",
+												"customers"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 12 Nov 2024 02:32:54 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"516daea6-3190-4ff1-a2f0-2643ba9a93e8\",\n    \"name\": \"John\",\n    \"lastName\": \"Doe\",\n    \"document\": \"123456789\",\n    \"invoices\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "List Customers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{domain}}/api/customers",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"customers"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "(Example) List Customers",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{domain}}/api/customers",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"api",
+												"customers"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 12 Nov 2024 02:37:21 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": \"516daea6-3190-4ff1-a2f0-2643ba9a93e8\",\n        \"name\": \"John\",\n        \"lastName\": \"Doe\",\n        \"document\": \"123456789\",\n        \"invoices\": []\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Get Customer",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{domain}}/api/customers/516daea6-3190-4ff1-a2f0-2643ba9a93e8",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"customers",
+										"516daea6-3190-4ff1-a2f0-2643ba9a93e8"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "(Example) Get Customer",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{domain}}/api/customers/516daea6-3190-4ff1-a2f0-2643ba9a93e8",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"api",
+												"customers",
+												"516daea6-3190-4ff1-a2f0-2643ba9a93e8"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 12 Nov 2024 02:38:28 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"516daea6-3190-4ff1-a2f0-2643ba9a93e8\",\n    \"name\": \"John\",\n    \"lastName\": \"Doe\",\n    \"document\": \"123456789\",\n    \"invoices\": []\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Customer",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{domain}}/api/customers/516daea6-3190-4ff1-a2f0-2643ba9a93e8",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"customers",
+										"516daea6-3190-4ff1-a2f0-2643ba9a93e8"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "(Example) Delete Customer",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{domain}}/api/customers/516daea6-3190-4ff1-a2f0-2643ba9a93e8",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"api",
+												"customers",
+												"516daea6-3190-4ff1-a2f0-2643ba9a93e8"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 12 Nov 2024 02:39:04 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "Get Customer Invoices",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{domain}}/api/customers/97db2b2e-d1a3-4a36-aafe-fa5218153fe4/invoices",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"customers",
+										"97db2b2e-d1a3-4a36-aafe-fa5218153fe4",
+										"invoices"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "(Example) Get Customer Invoices",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{domain}}/api/customers/97db2b2e-d1a3-4a36-aafe-fa5218153fe4/invoices",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"api",
+												"customers",
+												"97db2b2e-d1a3-4a36-aafe-fa5218153fe4",
+												"invoices"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 12 Nov 2024 03:09:24 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": \"8227902e-2110-4340-93fe-0d4fa2a6b4d8\",\n        \"total\": 100,\n        \"createdAt\": \"2024-11-12T02:58:10.632497Z\",\n        \"products\": []\n    },\n    {\n        \"id\": \"8535ac90-4392-40e8-bf18-76be881825fe\",\n        \"total\": 100,\n        \"createdAt\": \"2024-11-12T03:02:16.288742Z\",\n        \"products\": []\n    },\n    {\n        \"id\": \"911d0671-202b-4421-9fd9-21f12f4b8bca\",\n        \"total\": 100,\n        \"createdAt\": \"2024-11-12T03:05:08.042807Z\",\n        \"products\": []\n    },\n    {\n        \"id\": \"9676ef36-0674-48f9-81fc-05c137ba6159\",\n        \"total\": 100,\n        \"createdAt\": null,\n        \"products\": []\n    },\n    {\n        \"id\": \"a290b81d-1b45-49c4-b33d-e42cd2a0607f\",\n        \"total\": 100,\n        \"createdAt\": \"2024-11-12T03:03:25.984417Z\",\n        \"products\": []\n    },\n    {\n        \"id\": \"df0a7c4c-6a72-4c11-b245-8986167b0162\",\n        \"total\": 100,\n        \"createdAt\": \"2024-11-12T03:05:11.818208Z\",\n        \"products\": []\n    }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Invoice",
+					"item": [
+						{
+							"name": "Create Invoice",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"total\": 100,\r\n    \"customer\": {\r\n        \"id\": \"97db2b2e-d1a3-4a36-aafe-fa5218153fe4\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}/api/invoices",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"invoices"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "(Example) Create Invoice",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"total\": 100,\r\n    \"customer\": {\r\n        \"id\": \"97db2b2e-d1a3-4a36-aafe-fa5218153fe4\"\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}/api/invoices",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"api",
+												"invoices"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 12 Nov 2024 03:06:42 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"6cf836f9-1443-4be1-9398-e3e4aadff5f6\",\n    \"total\": 100,\n    \"createdAt\": \"2024-11-12T03:06:42.503060Z\",\n    \"products\": []\n}"
+								}
+							]
+						},
+						{
+							"name": "List Invoices",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{domain}}/api/invoices",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"invoices"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "(Example) List Invoices",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{domain}}/api/invoices",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"api",
+												"invoices"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 12 Nov 2024 03:07:09 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": \"03cb2b4a-7e99-4def-a998-b7d10807b5a4\",\n        \"total\": 100,\n        \"createdAt\": null,\n        \"products\": []\n    },\n    {\n        \"id\": \"6cf836f9-1443-4be1-9398-e3e4aadff5f6\",\n        \"total\": 100,\n        \"createdAt\": \"2024-11-12T03:06:42.503060Z\",\n        \"products\": []\n    },\n    {\n        \"id\": \"8227902e-2110-4340-93fe-0d4fa2a6b4d8\",\n        \"total\": 100,\n        \"createdAt\": \"2024-11-12T02:58:10.632497Z\",\n        \"products\": []\n    },\n    {\n        \"id\": \"8535ac90-4392-40e8-bf18-76be881825fe\",\n        \"total\": 100,\n        \"createdAt\": \"2024-11-12T03:02:16.288742Z\",\n        \"products\": []\n    },\n    {\n        \"id\": \"911d0671-202b-4421-9fd9-21f12f4b8bca\",\n        \"total\": 100,\n        \"createdAt\": \"2024-11-12T03:05:08.042807Z\",\n        \"products\": []\n    },\n    {\n        \"id\": \"9676ef36-0674-48f9-81fc-05c137ba6159\",\n        \"total\": 100,\n        \"createdAt\": null,\n        \"products\": []\n    },\n    {\n        \"id\": \"a290b81d-1b45-49c4-b33d-e42cd2a0607f\",\n        \"total\": 100,\n        \"createdAt\": \"2024-11-12T03:03:25.984417Z\",\n        \"products\": []\n    },\n    {\n        \"id\": \"df0a7c4c-6a72-4c11-b245-8986167b0162\",\n        \"total\": 100,\n        \"createdAt\": \"2024-11-12T03:05:11.818208Z\",\n        \"products\": []\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Get Invoice",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{domain}}/api/invoices/6cf836f9-1443-4be1-9398-e3e4aadff5f6",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"invoices",
+										"6cf836f9-1443-4be1-9398-e3e4aadff5f6"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "(Example) Get Invoice",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{domain}}/api/invoices/6cf836f9-1443-4be1-9398-e3e4aadff5f6",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"api",
+												"invoices",
+												"6cf836f9-1443-4be1-9398-e3e4aadff5f6"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 12 Nov 2024 03:07:49 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"6cf836f9-1443-4be1-9398-e3e4aadff5f6\",\n    \"total\": 100,\n    \"createdAt\": \"2024-11-12T03:06:42.503060Z\",\n    \"products\": []\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Invoice",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{domain}}/api/invoices/03cb2b4a-7e99-4def-a998-b7d10807b5a4",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"invoices",
+										"03cb2b4a-7e99-4def-a998-b7d10807b5a4"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "(Example) Delete Invoice",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{domain}}/api/invoices/03cb2b4a-7e99-4def-a998-b7d10807b5a4",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"api",
+												"invoices",
+												"03cb2b4a-7e99-4def-a998-b7d10807b5a4"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 12 Nov 2024 03:09:03 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "Create Product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Televisión 32 Pulgadas Samsung\",\r\n    \"description\": \"Televisión Marca Samsung de 32 Pulgadas Full HD Smart TV 4K DisplayPort 3.2 HDMI\",\r\n    \"price\": 850000,\r\n    \"stock\": 200,\r\n    \"category\": {\r\n        \"id\": \"13ab6e88-d987-4a45-9e3a-ae478cede789\"\r\n    } \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}/api/products",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "(Example) Create Product",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"Televisión 32 Pulgadas Samsung\",\r\n    \"description\": \"Televisión Marca Samsung de 32 Pulgadas Full HD Smart TV 4K DisplayPort 3.2 HDMI\",\r\n    \"price\": 850000,\r\n    \"stock\": 200,\r\n    \"category\": {\r\n        \"id\": \"13ab6e88-d987-4a45-9e3a-ae478cede789\"\r\n    } \r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}/api/products",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"api",
+												"products"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 12 Nov 2024 03:34:17 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"a5b59fc5-d28e-45fc-a23b-36fb9b7bc27b\",\n    \"title\": \"Televisión 32 Pulgadas Samsung\",\n    \"description\": \"Televisión Marca Samsung de 32 Pulgadas Full HD Smart TV 4K DisplayPort 3.2 HDMI\",\n    \"price\": 850000,\n    \"stock\": 200\n}"
+								}
+							]
+						},
+						{
+							"name": "List Products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{domain}}/api/products",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "(Example) LIst Products",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{domain}}/api/products",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"api",
+												"products"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 12 Nov 2024 03:34:58 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": \"182c4bf5-2c6e-424f-8f5b-94d6b31348c2\",\n        \"title\": \"Televisión 32 Pulgadas Samsung\",\n        \"description\": \"Televisión Marca Samsung de 32 Pulgadas Full HD Smart TV 4K DisplayPort 3.2 HDMI\",\n        \"price\": 850000,\n        \"stock\": 200\n    },\n    {\n        \"id\": \"2217252c-6d35-421c-8afb-d0405609c099\",\n        \"title\": \"Televisión 32 Pulgadas Samsung\",\n        \"description\": \"Televisión Marca Samsung de 32 Pulgadas Full HD Smart TV 4K DisplayPort 3.2 HDMI\",\n        \"price\": 850000,\n        \"stock\": 200\n    },\n    {\n        \"id\": \"5b9b37dd-6b1e-49f3-8a3a-7a05b9f226eb\",\n        \"title\": \"Televisión 32 Pulgadas Samsung\",\n        \"description\": \"Televisión Marca Samsung de 32 Pulgadas Full HD Smart TV 4K DisplayPort 3.2 HDMI\",\n        \"price\": 850000,\n        \"stock\": 200\n    },\n    {\n        \"id\": \"a5b59fc5-d28e-45fc-a23b-36fb9b7bc27b\",\n        \"title\": \"Televisión 32 Pulgadas Samsung\",\n        \"description\": \"Televisión Marca Samsung de 32 Pulgadas Full HD Smart TV 4K DisplayPort 3.2 HDMI\",\n        \"price\": 850000,\n        \"stock\": 200\n    },\n    {\n        \"id\": \"c6ea9d91-eaad-47d5-98af-7ab17eef9aa5\",\n        \"title\": \"Televisión 32 Pulgadas Samsung\",\n        \"description\": \"Televisión Marca Samsung de 32 Pulgadas Full HD Smart TV 4K DisplayPort 3.2 HDMI\",\n        \"price\": 850000,\n        \"stock\": 200\n    },\n    {\n        \"id\": \"e13268f9-9989-48c8-aea2-d06ff3135435\",\n        \"title\": \"Televisión 32 Pulgadas Samsung\",\n        \"description\": \"Televisión Marca Samsung de 32 Pulgadas Full HD Smart TV 4K DisplayPort 3.2 HDMI\",\n        \"price\": 850000,\n        \"stock\": 200\n    },\n    {\n        \"id\": \"eab65f95-15c4-42ef-979c-479b01eae08b\",\n        \"title\": \"Televisión 32 Pulgadas Samsung\",\n        \"description\": \"Televisión Marca Samsung de 32 Pulgadas Full HD Smart TV 4K DisplayPort 3.2 HDMI\",\n        \"price\": 850000,\n        \"stock\": 200\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Get Product",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{domain}}/api/products/2217252c-6d35-421c-8afb-d0405609c099",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"2217252c-6d35-421c-8afb-d0405609c099"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "(Example) Get Product",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{domain}}/api/products/182c4bf5-2c6e-424f-8f5b-94d6b31348c2",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"api",
+												"products",
+												"182c4bf5-2c6e-424f-8f5b-94d6b31348c2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 12 Nov 2024 03:35:32 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"182c4bf5-2c6e-424f-8f5b-94d6b31348c2\",\n    \"title\": \"Televisión 32 Pulgadas Samsung\",\n    \"description\": \"Televisión Marca Samsung de 32 Pulgadas Full HD Smart TV 4K DisplayPort 3.2 HDMI\",\n    \"price\": 850000,\n    \"stock\": 200\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Product",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{domain}}/api/products/182c4bf5-2c6e-424f-8f5b-94d6b31348c2",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"182c4bf5-2c6e-424f-8f5b-94d6b31348c2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "(Example) Delete Product",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{domain}}/api/products/182c4bf5-2c6e-424f-8f5b-94d6b31348c2",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"api",
+												"products",
+												"182c4bf5-2c6e-424f-8f5b-94d6b31348c2"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 12 Nov 2024 03:36:09 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "List Products by Category",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{domain}}/api/products/category/13ab6e88-d987-4a45-9e3a-ae478cede789",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"category",
+										"13ab6e88-d987-4a45-9e3a-ae478cede789"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "(Example) List Products By Category",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{domain}}/api/products/category/13ab6e88-d987-4a45-9e3a-ae478cede789",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"api",
+												"products",
+												"category",
+												"13ab6e88-d987-4a45-9e3a-ae478cede789"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 12 Nov 2024 03:37:36 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": \"2217252c-6d35-421c-8afb-d0405609c099\",\n        \"title\": \"Televisión 32 Pulgadas Samsung\",\n        \"description\": \"Televisión Marca Samsung de 32 Pulgadas Full HD Smart TV 4K DisplayPort 3.2 HDMI\",\n        \"price\": 850000,\n        \"stock\": 200\n    },\n    {\n        \"id\": \"5b9b37dd-6b1e-49f3-8a3a-7a05b9f226eb\",\n        \"title\": \"Televisión 32 Pulgadas Samsung\",\n        \"description\": \"Televisión Marca Samsung de 32 Pulgadas Full HD Smart TV 4K DisplayPort 3.2 HDMI\",\n        \"price\": 850000,\n        \"stock\": 200\n    },\n    {\n        \"id\": \"a5b59fc5-d28e-45fc-a23b-36fb9b7bc27b\",\n        \"title\": \"Televisión 32 Pulgadas Samsung\",\n        \"description\": \"Televisión Marca Samsung de 32 Pulgadas Full HD Smart TV 4K DisplayPort 3.2 HDMI\",\n        \"price\": 850000,\n        \"stock\": 200\n    },\n    {\n        \"id\": \"c6ea9d91-eaad-47d5-98af-7ab17eef9aa5\",\n        \"title\": \"Televisión 32 Pulgadas Samsung\",\n        \"description\": \"Televisión Marca Samsung de 32 Pulgadas Full HD Smart TV 4K DisplayPort 3.2 HDMI\",\n        \"price\": 850000,\n        \"stock\": 200\n    },\n    {\n        \"id\": \"e13268f9-9989-48c8-aea2-d06ff3135435\",\n        \"title\": \"Televisión 32 Pulgadas Samsung\",\n        \"description\": \"Televisión Marca Samsung de 32 Pulgadas Full HD Smart TV 4K DisplayPort 3.2 HDMI\",\n        \"price\": 850000,\n        \"stock\": 200\n    },\n    {\n        \"id\": \"eab65f95-15c4-42ef-979c-479b01eae08b\",\n        \"title\": \"Televisión 32 Pulgadas Samsung\",\n        \"description\": \"Televisión Marca Samsung de 32 Pulgadas Full HD Smart TV 4K DisplayPort 3.2 HDMI\",\n        \"price\": 850000,\n        \"stock\": 200\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Search Products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{domain}}/api/products/search?query=televis",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"search"
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": "televis"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "(Example) Search Products",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{domain}}/api/products/search?query=televis",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"api",
+												"products",
+												"search"
+											],
+											"query": [
+												{
+													"key": "query",
+													"value": "televis"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 12 Nov 2024 03:38:53 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": \"2217252c-6d35-421c-8afb-d0405609c099\",\n        \"title\": \"Televisión 32 Pulgadas Samsung\",\n        \"description\": \"Televisión Marca Samsung de 32 Pulgadas Full HD Smart TV 4K DisplayPort 3.2 HDMI\",\n        \"price\": 850000,\n        \"stock\": 200\n    },\n    {\n        \"id\": \"5b9b37dd-6b1e-49f3-8a3a-7a05b9f226eb\",\n        \"title\": \"Televisión 32 Pulgadas Samsung\",\n        \"description\": \"Televisión Marca Samsung de 32 Pulgadas Full HD Smart TV 4K DisplayPort 3.2 HDMI\",\n        \"price\": 850000,\n        \"stock\": 200\n    },\n    {\n        \"id\": \"a5b59fc5-d28e-45fc-a23b-36fb9b7bc27b\",\n        \"title\": \"Televisión 32 Pulgadas Samsung\",\n        \"description\": \"Televisión Marca Samsung de 32 Pulgadas Full HD Smart TV 4K DisplayPort 3.2 HDMI\",\n        \"price\": 850000,\n        \"stock\": 200\n    },\n    {\n        \"id\": \"c6ea9d91-eaad-47d5-98af-7ab17eef9aa5\",\n        \"title\": \"Televisión 32 Pulgadas Samsung\",\n        \"description\": \"Televisión Marca Samsung de 32 Pulgadas Full HD Smart TV 4K DisplayPort 3.2 HDMI\",\n        \"price\": 850000,\n        \"stock\": 200\n    },\n    {\n        \"id\": \"e13268f9-9989-48c8-aea2-d06ff3135435\",\n        \"title\": \"Televisión 32 Pulgadas Samsung\",\n        \"description\": \"Televisión Marca Samsung de 32 Pulgadas Full HD Smart TV 4K DisplayPort 3.2 HDMI\",\n        \"price\": 850000,\n        \"stock\": 200\n    },\n    {\n        \"id\": \"eab65f95-15c4-42ef-979c-479b01eae08b\",\n        \"title\": \"Televisión 32 Pulgadas Samsung\",\n        \"description\": \"Televisión Marca Samsung de 32 Pulgadas Full HD Smart TV 4K DisplayPort 3.2 HDMI\",\n        \"price\": 850000,\n        \"stock\": 200\n    }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "Create Category",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Electrodomesticos\",\r\n    \"description\": \"Pequeños y grandes Electrodomesticos del hogar\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}/api/categories",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "(Example) Create Category",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Electrodomesticos\",\r\n    \"description\": \"Pequeños y grandes Electrodomesticos del hogar\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}/api/categories",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"api",
+												"categories"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 12 Nov 2024 03:14:18 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"f5c71633-0767-4583-8b91-434a5c0d0170\",\n    \"name\": \"Electrodomesticos\",\n    \"description\": \"Pequeños y grandes Electrodomesticos del hogar\"\n}"
+								}
+							]
+						},
+						{
+							"name": "List Categories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{domain}}/api/categories",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "(Example) List Categories",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{domain}}/api/categories",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"api",
+												"categories"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 12 Nov 2024 03:14:48 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": \"f5c71633-0767-4583-8b91-434a5c0d0170\",\n        \"name\": \"Electrodomesticos\",\n        \"description\": \"Pequeños y grandes Electrodomesticos del hogar\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Get Category",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{domain}}/api/categories/f5c71633-0767-4583-8b91-434a5c0d0170",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										"f5c71633-0767-4583-8b91-434a5c0d0170"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "(Example) Get Category",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{domain}}/api/categories/f5c71633-0767-4583-8b91-434a5c0d0170",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"api",
+												"categories",
+												"f5c71633-0767-4583-8b91-434a5c0d0170"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 12 Nov 2024 03:15:21 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"f5c71633-0767-4583-8b91-434a5c0d0170\",\n    \"name\": \"Electrodomesticos\",\n    \"description\": \"Pequeños y grandes Electrodomesticos del hogar\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Category",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{domain}}/api/categories/6f1ff3fa-8d71-443f-8e26-8e7aea79a94f",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										"6f1ff3fa-8d71-443f-8e26-8e7aea79a94f"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "(Example) Delete Category",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{domain}}/api/categories/6f1ff3fa-8d71-443f-8e26-8e7aea79a94f",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"api",
+												"categories",
+												"6f1ff3fa-8d71-443f-8e26-8e7aea79a94f"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 12 Nov 2024 03:16:41 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Purchase",
+					"item": [
+						{
+							"name": "Process Purchase",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"customerId\": \"97db2b2e-d1a3-4a36-aafe-fa5218153fe4\",\r\n    \"productIds\": [\"2217252c-6d35-421c-8afb-d0405609c099\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}/api/purchases",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"purchases"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "(Example) Process Purchase",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"customerId\": \"97db2b2e-d1a3-4a36-aafe-fa5218153fe4\",\r\n    \"productIds\": [\"2217252c-6d35-421c-8afb-d0405609c099\"]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{domain}}/api/purchases",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"api",
+												"purchases"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Content-Length",
+											"value": "0"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 12 Nov 2024 03:55:28 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
