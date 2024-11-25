@@ -1,7 +1,6 @@
 package com.coderhouse.ecommerce.model.cart;
 
 import com.coderhouse.ecommerce.model.Customer;
-import com.coderhouse.ecommerce.model.cart.CartItem;
 
 import jakarta.persistence.Id;
 import jakarta.persistence.Entity;

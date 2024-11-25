@@ -1,11 +1,9 @@
 package com.coderhouse.ecommerce.service.product;
 
 import com.coderhouse.ecommerce.dto.auth.ProductSellerValidator;
-import com.coderhouse.ecommerce.exception.ValidationAdvice;
 import com.coderhouse.ecommerce.model.product.ProductSeller;
 import com.coderhouse.ecommerce.repository.product.ProductSellerRepository;
 
-import dev.ditsche.validator.error.ValidationException;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
