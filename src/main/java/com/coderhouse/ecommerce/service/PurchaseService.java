@@ -3,7 +3,7 @@ package com.coderhouse.ecommerce.service;
 import com.coderhouse.ecommerce.dto.PurchaseRequestDTO;
 import com.coderhouse.ecommerce.model.Customer;
 import com.coderhouse.ecommerce.model.Invoice;
-import com.coderhouse.ecommerce.model.Product;
+import com.coderhouse.ecommerce.model.product.Product;
 import com.coderhouse.ecommerce.repository.CustomerRepository;
 import com.coderhouse.ecommerce.repository.InvoiceRepository;
 import com.coderhouse.ecommerce.repository.ProductRepository;

@@ -1,5 +1,6 @@
 package com.coderhouse.ecommerce.model;
 
+import com.coderhouse.ecommerce.model.product.Product;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import lombok.AllArgsConstructor;

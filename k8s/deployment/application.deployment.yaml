@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coderhouse-api
+spec:
+  selector:
+    matchLabels:
+      app: coderhouse-api
+  template:
+    metadata:
+      labels:
+        app: coderhouse-api
+    spec:
+      containers:
+      - name: coderhouse-api
+        image: galfrevn/coderhouse-api:kubernetes
+        ports:
+        - containerPort: 8080
+        env:
+        - name: SPRING_DATASOURCE_URL
+          value: jdbc:mysql://database:3306/core
+        - name: SPRING_DATASOURCE_USERNAME
+          value: root
+        - name: SPRING_DATASOURCE_PASSWORD
+          value: password
+        resources:
+          requests:
+            cpu: "200m"
+            memory: "256Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"

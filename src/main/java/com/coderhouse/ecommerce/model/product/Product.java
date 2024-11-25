@@ -1,6 +1,7 @@
-package com.coderhouse.ecommerce.model;
+package com.coderhouse.ecommerce.model.product;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.Getter;
@@ -24,7 +25,14 @@ public class Product {
     private double price;
     private int stock;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JsonBackReference
-    private Category category;
+    @Enumerated(EnumType.STRING)
+    private ProductStatus status;
+
+    @Enumerated(EnumType.STRING)
+    private ProductCategory category;
+
+    @ManyToOne()
+    @JsonIgnore
+    private ProductSeller seller;
+
 }

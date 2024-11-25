@@ -24,6 +24,9 @@ public class Customer {
     private String lastName;
     private String document;
 
+    private String email;
+    private String password;
+
     @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
     @JsonManagedReference
     private List<Invoice> invoices = List.of();
